@@ -129,12 +129,6 @@ enum XMPPRosterFlags
 	else
 		dispatch_sync(moduleQueue, block);
 	
-	#ifdef _XMPP_VCARD_AVATAR_MODULE_H
-	{
-		[xmppStream removeAutoDelegate:self delegateQueue:moduleQueue fromModulesOfClass:[XMPPvCardAvatarModule class]];
-	}
-	#endif
-	
 	[super deactivate];
 }
 
